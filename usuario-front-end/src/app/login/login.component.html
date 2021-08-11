@@ -1,0 +1,41 @@
+<div class="content" role="main">
+
+
+  <div class="card-container">
+
+
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 50px;">
+        <h1>Carvajal Login</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <form [formGroup]="usersForm" (ngSubmit)="onSubmit()" id="userForm" name="userForm">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="text" class="form-control" id="email" placeholder="hola@example.com"
+                         formControlName="email">
+                  <div *ngIf="formSubmitted && userFormControls.email.invalid">
+                    <span style="color: red;">Invalid value</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" id="password" placeholder=""
+                         formControlName="password">
+                </div>
+              </div>
+              <div class="col-md-12 text-center">
+                <button class="btn btn-success" type="submit">Login</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

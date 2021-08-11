@@ -1,0 +1,22 @@
+<h2 style="margin-top: 50px;" class="text-center">TIC-TAC-TOE</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 text-center"
+         style="border: 1px solid black; padding: 2rem;"
+         *ngFor="let item of table; let i = index"
+         [attr.data-index]="i"
+         (click)="clickTable(i)"
+    >
+      {{ item }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 text-center" *ngIf="viewWin" style="font-size: 2rem;">
+      <span>{{ viewWinPlayer }} Wins</span>
+    </div>
+    <div class="col-12 text-right">
+      <button class="btn btn-dark" (click)="clear()">Reset</button>
+    </div>
+  </div>
+
+</div>
